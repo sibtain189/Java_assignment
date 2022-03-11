@@ -28,33 +28,22 @@ public class Main {
 
 //       Hotel a= main.provideFood(amount);
 
-        if (provideFood(amount)==new TajHotel()) {
-            TajHotel tajHotel = new TajHotel();
-            tajHotel.chickenBiryani();
-            tajHotel.masalaDosa();
-            tajHotel.welcomeDrink();
+        Hotel hotel = main.provideFood(amount);
+        if(hotel == null){
+            System.out.println("Please Enter a valid amount");
         }
-//        else if(provideFood(amount)==new RoadSideHotel()){
-//            RoadSideHotel roadSideHotel = new RoadSideHotel();
-//            roadSideHotel.chickenBiryani();
-//            roadSideHotel.masalaDosa();
-//        }else {
-//            System.out.println("Please Enter a valid amount.");
-//        }
-
-
-        //prompt the user to take the amount from the user
-        //call the provideFood method on the Main class object by supplying the amount
-        //Based on the returned Hotel object call the methods:
-        //if the returned object is RoadSideHotel then call the following methods:
-//        chickenBiryani();
-//        masalaDosa();
-        //if the returned object is TajHotel then call the following methods:
-//        welcomeDrink();
-//        chickenBiryani();
-//        masalaDosa();
-        //if the returned value is null then show the following message:
-//        Please Enter a valid amount.
+        else {
+            if(hotel instanceof TajHotel){
+                TajHotel tajHotel = (TajHotel) hotel;
+                tajHotel.welcomeDrink();
+                hotel.chickenBiryani();
+                hotel.masalaDosa();
+            }
+            else {
+                hotel.chickenBiryani();
+                hotel.masalaDosa();
+            }
+        }
     }
 }
 
