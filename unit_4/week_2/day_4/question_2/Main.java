@@ -41,5 +41,7 @@ public class Main {
             System.out.println(main.findAndReturnPrimeNumbers(arr));
         }
 
+        System.out.println("Added to the Github");
+
     }
 }
