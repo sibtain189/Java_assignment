@@ -4,9 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    public List<Integer> findAndReturnPrimeNumbers(int[] inputArray) {
+    public ArrayList<Integer> findAndReturnPrimeNumbers(int[] inputArray) {
 
-        List<Integer> arr2 = new ArrayList<>();
+        ArrayList<Integer> arr2 = new ArrayList<>();
+//        ArrayList<String> arr3 = new ArrayList<>();
 
         for (int j = 0; j < inputArray.length; j++) {
             boolean isPrime = false;
