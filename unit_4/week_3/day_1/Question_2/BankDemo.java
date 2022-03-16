@@ -4,7 +4,9 @@ public class BankDemo {
 
     public static void main(String[] args)  {
         SavingAccount ex = new SavingAccount();
+
         ex.deposit(2000);
+
         try {
             ex.withdraw(5000.0);
             System.out.println("your balance is : "+ex.balance);
