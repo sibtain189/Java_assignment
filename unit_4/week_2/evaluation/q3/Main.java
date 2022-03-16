@@ -10,8 +10,6 @@ public class Main {
 
         String[] arr = a.split(" ");
 
-//        printNum(arr);
-
         System.out.println(printNum(arr));
 
     }
@@ -31,7 +29,6 @@ public class Main {
         }else {
             return "Error";
         }
-
 
     }
 }
