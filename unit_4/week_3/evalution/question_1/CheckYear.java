@@ -6,32 +6,24 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.Scanner;
 
-public class EmployeeBonus {
+public class CheckYear {
 
-//    LocalDate joinDate;
+    double livedYear(String birth) throws InvalidAge {
 
-    double bonusOfExperience(String joinDate) throws InvalidAge {
-
-        boolean rightDate = joinDate.matches("^\\d{2}-\\d{2}-\\d{4}");
+        boolean rightDate = birth.matches("^\\d{2}-\\d{2}-\\d{4}");
         if(!rightDate)
             throw new InvalidAge("Please pass the date in proper format");
 
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-        LocalDate dateEnteredInFormat = LocalDate.parse(joinDate, dtf);
+        LocalDate dateEnteredInFormat = LocalDate.parse(birth, dtf);
         LocalDate today = LocalDate.now();
 
-        long experience = ChronoUnit.YEARS.between(dateEnteredInFormat,today);
-        if(experience<0)
+        long liveExperience = ChronoUnit.YEARS.between(dateEnteredInFormat,today);
+        if(liveExperience<0)
             throw new InvalidAge("Age should not be in Future");
-
-        if(experience<=1){
-            return 5000;
+        else {
+            return liveExperience;
         }
-        if(experience>1 && experience<=2){
-            return 8000;
-        }
-
-        return 10000;
 
     }
 }
