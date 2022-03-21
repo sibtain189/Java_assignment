@@ -1,0 +1,8 @@
+1. Final:-
+    a) the final keyword is useful when we want a variable to always store the same value.
+    b) It is non-access modifier for classes and methods which makes them non-changeable(Can't inherit and override).
+    example -- the value of PI(3.14)
+
+2. Finally:-
+    a) It is a part of exception which must be executed whether exception generated or not.
+    b) if we don't want execute finally we can use "System.exit()".
