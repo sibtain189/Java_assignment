@@ -1,4 +1,4 @@
-package Java_assignment.unit_4.week_3.evalution.question_1.q1;
+package Java_assignment.unit_4.week_3.evalution.question_2.q1;
 
 public class Unchecked {
 
