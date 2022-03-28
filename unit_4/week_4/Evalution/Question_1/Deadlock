@@ -1,0 +1,5 @@
+Deadlock: It is condition where two or more threads are blocked/freeze and waiting for each other
+          to execute.
+
+       -> It is occurs when the waiting process is holding for another resources that the first
+          needs before it can finish.
